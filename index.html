@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeshiko J — Software Engineer</title>
+  <meta name="description" content="Software Engineer based in Kanyakumari, India, specializing in Full-Stack Web Development, Cloud Infrastructure, and DevOps.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="assets/favicon.jpg">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- Noise / Grain Filter -->
+  <div class="noise-overlay"></div>
+
+  <!-- Floating Left Navigation Menu -->
+  <nav class="side-nav">
+    <a href="#hero" class="side-nav-link active">Home</a>
+    <a href="#work" class="side-nav-link">Works</a>
+    <a href="#about" class="side-nav-link">About me</a>
+    <a href="#contact" class="side-nav-link">Contact</a>
+  </nav>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="logo">Jeshiko.</div>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span id="live-time">KANYAKUMARI, IN / 00:00:00</span>
+    </div>
+  </header>
+
+  <!-- Main Content Scroll Wrapper -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-content reveal">
+        <div class="badge-container">
+          <div class="badge">Software Engineer</div>
+          <div class="badge">Full-Stack & DevOps</div>
+          <div class="badge">B.E. CSE / Graduating 2025</div>
+        </div>
+        <h1 class="hero-title">
+          Jeshiko <span>J</span>
+        </h1>
+        <p class="hero-desc">
+          Building end-to-end full-stack web applications with Python & Django, containerizing workflows with Docker & Kubernetes, and deploying scalable architectures on AWS.
+        </p>
+        <a href="assets/Jeshiko_Resume.pdf" download class="download-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          Download Resume / CV
+        </a>
+      </div>
+
+      <!-- Scattered Retro Stickers / Interactive Badges -->
+      <div class="sticker s1" id="sticker-1">
+        <span>🐍</span> Python & Django
+      </div>
+      <div class="sticker s2" id="sticker-2">
+        <span>⚛️</span> React & Tailwind
+      </div>
+      <div class="sticker s3" id="sticker-3">
+        <span>☁️</span> AWS & Terraform
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+      <div class="section-header reveal">
+        <span class="section-label">Selected Projects & Prototypes</span>
+        <h2 class="section-title">Works</h2>
+      </div>
+
+      <div class="work-grid">
+        
+        <!-- Project 1 -->
+        <a href="#work" class="work-card reveal" 
+           data-title="E-Commerce Web Platform" 
+           data-tags="Python,Django,MongoDB,React" 
+           data-img="assets/ecommerce_3d.jpg" 
+           data-desc="A fully functional, high-performance e-commerce platform built following MVC architecture pattern. Designed to scale, it handles product catalog listings, cart systems, user profiles, and order payments."
+           data-bullets="Implemented standard Django & MongoDB backend managing 3 primary data tables (users, orders, products);Designed responsive frontend templates with lazy loading and code splitting to speed up initial paint speeds by 40%;Integrated secure user authentication tokens alongside checkout workflow APIs;Maintained full database index coverage to guarantee low query response latency.">
+          <div class="card-img-wrapper">
+            <img src="assets/ecommerce_3d.jpg" alt="E-Commerce Web Application mockup">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-info">
+            <div class="card-details">
+              <h3 class="card-title">E-Commerce Web Application</h3>
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Django</span>
+                <span class="card-tag">MongoDB</span>
+                <span class="card-tag">React</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">
+                Designed and developed a fully functional e-commerce platform with 5+ core modules (product listing, shopping cart, authentication, order/payment integration). Optimized frontend component loading to reduce page load speed by 40%.
+              </p>
+            </div>
+            <span class="card-num">01</span>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="#work" class="work-card reveal" 
+           data-title="Full-Stack Collaboration Platform" 
+           data-tags="Python,Django,React,MongoDB,REST APIs" 
+           data-img="assets/fullstack_photo.jpg" 
+           data-desc="A real-time collaborative workspace dashboard built with Python Django REST framework on the backend and React on the frontend. Designed to coordinate developer workflows, task logs, and project schedules dynamically across teams."
+           data-bullets="Engineered a Django REST Framework backend with JWT authentication, session management, and role-based access control;Built a responsive React dashboard with real-time task boards, activity feeds, and user collaboration panels;Modelled MongoDB schemas for flexible document storage handling projects, users, and activity logs;Deployed the full stack on AWS EC2 with Nginx reverse proxy and automated SSL certificate renewal;Integrated a live notification system using WebSockets to push real-time updates across connected users.">
+          <div class="card-img-wrapper">
+            <img src="assets/fullstack_photo.jpg" alt="Full-Stack Collaborative Platform - Python Django React">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-info">
+            <div class="card-details">
+              <h3 class="card-title">Full-Stack Collaborative Platform</h3>
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Django</span>
+                <span class="card-tag">React</span>
+                <span class="card-tag">REST APIs</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">
+                Full-stack platform built with Python Django REST API backend and React frontend, featuring JWT auth, real-time WebSocket updates, and MongoDB document storage. Architected secure data flows for seamless team collaboration.
+              </p>
+            </div>
+            <span class="card-num">02</span>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="#work" class="work-card reveal" 
+           data-title="Cloud & DevOps Automation" 
+           data-tags="AWS,Docker,Terraform,Jenkins" 
+           data-img="assets/devops_photo.jpg" 
+           data-desc="Infrastructure as Code configurations and CI/CD pipelines enabling rapid containerized microservice deployments and resilient cloud hosting environments on AWS."
+           data-bullets="Provisioned VPC networks, EC2 clusters, and secure S3 buckets using Terraform IaC configurations;Wrote multi-stage Dockerfiles and container orchestration manifests for Kubernetes deployments;Constructed automated Jenkins pipelines triggered on git branch commits with rollback support;Integrated vulnerability auditing scans, unit test gates, and code coverage checks into CI/CD stages;Configured CloudWatch monitoring dashboards and SNS alerts for production uptime and error tracking.">
+          <div class="card-img-wrapper">
+            <img src="assets/devops_photo.jpg" alt="Cloud & DevOps Automation setup">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-info">
+            <div class="card-details">
+              <h3 class="card-title">Cloud & DevOps Automation</h3>
+              <div class="card-tags">
+                <span class="card-tag">AWS</span>
+                <span class="card-tag">Docker</span>
+                <span class="card-tag">Terraform</span>
+                <span class="card-tag">Jenkins</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">
+                Engineered automated infrastructure deployments with Terraform IaC, containerized services on Docker & Kubernetes, and robust Jenkins CI/CD pipelines with monitoring via CloudWatch.
+              </p>
+            </div>
+            <span class="card-num">03</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-header reveal">
+        <span class="section-label">Background / Profile</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-container reveal">
+        
+        <!-- Left Column: CRT Terminal Display -->
+        <div class="about-graphics">
+          <div class="about-device">
+            <div class="device-header">
+              <div class="device-dots">
+                <span class="device-dot red"></span>
+                <span class="device-dot yellow"></span>
+                <span class="device-dot green"></span>
+              </div>
+              <span class="device-title">system_monitor.sh</span>
+              <span></span>
+            </div>
+            <div class="device-body">
+              <div class="device-text">
+                <p>> LOADING PERSONALITY DATA...</p>
+                <p>> NAME: Jeshiko J</p>
+                <p>> DEGREE: B.E. Computer Science & Eng.</p>
+                <p>> COLLEGE: Bethlahem Inst. of Eng.</p>
+                <p>> ORIGIN: Kanyakumari, Tamil Nadu</p>
+                <p>> INTERN: Crescent Infotech (June - Aug 2024)</p>
+                <p>> SEEKING: Entry-Level Software Roles</p>
+              </div>
+              <div class="device-text" style="color: var(--accent-orange); text-shadow: 0 0 4px rgba(255, 159, 10, 0.5);">
+                <p>> STATUS: Ready for deployment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Info & Tabbed Casing -->
+        <div class="about-bio-container">
+          
+          <!-- Photo Panel -->
+          <div class="photo-card">
+            <div class="photo-header">
+              <div class="device-dots">
+                <span class="device-dot red"></span>
+                <span class="device-dot yellow"></span>
+                <span class="device-dot green"></span>
+              </div>
+              <span class="photo-title">JESHIKO J</span>
+            </div>
+            <div class="photo-wrapper">
+              <img src="assets/jeshiko.jpg" alt="Jeshiko J Photo">
+            </div>
+          </div>
+
+          <!-- Tabbed Info Casing -->
+          <div class="about-tabs-container">
+            <div class="tab-headers">
+              <button class="tab-btn active" data-tab="tab-bio">profile.txt</button>
+              <button class="tab-btn" data-tab="tab-education">education.log</button>
+              <button class="tab-btn" data-tab="tab-experience">experience.log</button>
+              <button class="tab-btn" data-tab="tab-certifications">credentials.sys</button>
+            </div>
+            <div class="tab-contents">
+              
+              <!-- Tab 1: Bio -->
+              <div class="tab-content active" id="tab-bio">
+                <div class="about-bio">
+                  <p>
+                    Motivated Software Engineer with hands-on experience in full-stack web development. I specialize in designing and deploying scalable web applications from end to end.
+                  </p>
+                  <p>
+                    I am actively expanding my expertise in Cloud Computing (AWS), DevOps automation, CI/CD pipelines, and Infrastructure as Code, seeking to grow in high-performance environments.
+                  </p>
+                  
+                  <div class="skill-category">
+                    <span class="section-label" style="font-size: 0.8rem; margin-bottom: 8px;">Cloud & DevOps</span>
+                    <div class="skills-list">
+                      <span class="skill-tag">AWS (EC2, S3, VPC)</span>
+                      <span class="skill-tag">Docker</span>
+                      <span class="skill-tag">Kubernetes</span>
+                      <span class="skill-tag">Terraform</span>
+                      <span class="skill-tag">Ansible</span>
+                      <span class="skill-tag">CI/CD Pipelines</span>
+                      <span class="skill-tag">Jenkins</span>
+                    </div>
+                  </div>
+
+                  <div class="skill-category" style="margin-top: 16px;">
+                    <span class="section-label" style="font-size: 0.8rem; margin-bottom: 8px;">Full-Stack Development</span>
+                    <div class="skills-list">
+                      <span class="skill-tag">Python</span>
+                      <span class="skill-tag">Django</span>
+                      <span class="skill-tag">React</span>
+                      <span class="skill-tag">MongoDB</span>
+                      <span class="skill-tag">JavaScript</span>
+                      <span class="skill-tag">HTML5 / CSS3</span>
+                      <span class="skill-tag">Tailwind CSS</span>
+                      <span class="skill-tag">REST APIs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 2: Education & Achievements -->
+              <div class="tab-content" id="tab-education">
+                <div class="education-block" style="border-bottom: 1px dashed var(--border-color); padding-bottom: 18px; margin-bottom: 18px;">
+                  <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Bachelor of Engineering (B.E.)</h4>
+                  <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">Computer Science & Engineering | June 2025</p>
+                  <p class="edu-desc" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">
+                    Bethlahem Institute of Engineering, Kanyakumari, Tamil Nadu.<br>
+                    <strong>Areas of Focus:</strong> Full-Stack Development, Cloud Infrastructure, DevOps.
+                  </p>
+                </div>
+                
+                <div class="achievements-block">
+                  <span class="section-label" style="font-size: 0.8rem; margin-bottom: 10px;">Key Achievements</span>
+                  <ul class="achievements-list">
+                    <li>Completed industrial visit at Srishti Campus, observing agile workflows across 4+ enterprise software teams.</li>
+                    <li>Identified 3 key areas for personal skill development in cloud infrastructure and CI/CD automation based on enterprise technology exposure.</li>
+                    <li>Developed professional portfolio website with CI/CD pipeline visual motif.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Tab 3: Experience -->
+              <div class="tab-content" id="tab-experience">
+                <div class="education-block" style="border-bottom: 1px dashed var(--border-color); padding-bottom: 18px; margin-bottom: 18px;">
+                  <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Artificial Intelligence & ML Intern</h4>
+                  <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">Crescent Infotech | June 2024 - Aug 2024</p>
+                  <ul class="achievements-list" style="margin-top: 10px;">
+                    <li>Developed machine learning prototypes utilizing Python, pandas, and scikit-learn for data analysis workflows.</li>
+                    <li>Collaborated with senior engineers to optimize data processing pipelines, reducing computation time by 15%.</li>
+                    <li>Created technical documentation and presentations for internal stakeholder review.</li>
+                  </ul>
+                </div>
+
+                <div class="education-block">
+                  <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Web Development Intern</h4>
+                  <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">NoviTech | 2023</p>
+                  <ul class="achievements-list" style="margin-top: 10px;">
+                    <li>Designed and implemented responsive frontend interfaces using HTML5, CSS3, and JavaScript.</li>
+                    <li>Ensured cross-browser compatibility and optimized web assets for faster loading speeds.</li>
+                    <li>Participated in agile development cycles to deliver functional UI components on schedule.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Tab 4: Certifications -->
+              <div class="tab-content" id="tab-certifications">
+                <div class="certifications-grid">
+                  
+                  <div class="cert-card">
+                    <span class="cert-badge">Certification</span>
+                    <h5>Cloud DevOps</h5>
+                    <p>SLA Academy (2026)</p>
+                    <span class="cert-tools">Docker, CI/CD, Kubernetes, Ansible</span>
+                  </div>
+
+                  <div class="cert-card">
+                    <span class="cert-badge">Certification</span>
+                    <h5>Python Full Stack</h5>
+                    <p>E-MAX (2025)</p>
+                    <span class="cert-tools">Django, React, REST, MongoDB</span>
+                  </div>
+
+                  <div class="cert-card">
+                    <span class="cert-badge">Certification</span>
+                    <h5>Data Science with Python</h5>
+                    <p>IAMAI (2023)</p>
+                    <span class="cert-tools">pandas, scikit-learn, Statistics</span>
+                  </div>
+
+                  <div class="cert-card">
+                    <span class="cert-badge">Certification</span>
+                    <h5>Interaction Design</h5>
+                    <p>Feather (2024)</p>
+                    <span class="cert-tools">UI/UX Principles, Figma, Prototyping</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact-layout reveal">
+        <span class="section-label">Start a Conversation</span>
+        <h2 class="contact-title">Let's build something scalable together.</h2>
+        
+        <!-- Terminal Contact Form -->
+        <div class="terminal-form-container">
+          <div class="device-header">
+            <div class="device-dots">
+              <span class="device-dot red"></span>
+              <span class="device-dot yellow"></span>
+              <span class="device-dot green"></span>
+            </div>
+            <span class="device-title">contact_console.sh</span>
+            <span></span>
+          </div>
+          <form class="terminal-form" id="contact-form">
+            <div class="terminal-line">
+              <span class="prompt">visitor@guest:~$</span>
+              <label for="form-name">enter_name:</label>
+              <input type="text" id="form-name" required placeholder="your name">
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">visitor@guest:~$</span>
+              <label for="form-email">enter_email:</label>
+              <input type="email" id="form-email" required placeholder="your email">
+            </div>
+            <div class="terminal-line textarea-line">
+              <span class="prompt">visitor@guest:~$</span>
+              <label for="form-message">enter_message:</label>
+              <textarea id="form-message" required placeholder="write your message..."></textarea>
+            </div>
+            <div class="terminal-line submit-line">
+              <span class="prompt">visitor@guest:~$</span>
+              <button type="submit" class="terminal-submit">./submit_message.sh</button>
+            </div>
+            <div class="terminal-logs" id="form-logs">
+              <!-- Logs print here dynamically -->
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-meta-links">
+          <a href="mailto:chandranjeshiko@gmail.com" class="contact-meta-link">📧 chandranjeshiko@gmail.com</a>
+          <a href="tel:+917395881571" class="contact-meta-link">📱 +91 7395881571</a>
+          <a href="https://linkedin.com/in/JeshikoJ" target="_blank" rel="noopener noreferrer" class="contact-meta-link">🔗 linkedin.com/in/JeshikoJ</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SKEUOMORPHIC KEYBOARD CONSOLE FOOTER -->
+  <footer>
+    <div class="console-dashboard reveal">
+      
+      <!-- Left Side: Status Display & Keycaps Grid -->
+      <div class="console-left">
+        <div class="console-status-row">
+          <div class="console-status-display">
+            <span class="status-led"></span>
+            <span class="status-text">Available For Hire</span>
+          </div>
+          <div class="console-badge">🔧</div>
+        </div>
+        
+        <div class="console-keys-grid">
+          <!-- Row 1: HOME (span 3), G3 (span 2), IG (span 2) -->
+          <a href="#hero" class="keycap key-black key-width-3" data-key="Escape" id="key-home">
+            <span>HOME</span>
+          </a>
+          <a href="https://github.com/JeshikoJ" target="_blank" class="keycap key-g3 key-width-2" id="key-github">
+            <span>G3</span>
+          </a>
+          <a href="https://linkedin.com/in/JeshikoJ" target="_blank" class="keycap key-ig key-width-2" id="key-linkedin">
+            <span>IG</span>
+          </a>
+          
+          <!-- Row 2: @ (span 2), HIRE ME (span 3), X (span 2) -->
+          <a href="mailto:chandranjeshiko@gmail.com" class="keycap key-beige key-width-2" id="key-email">
+            <span>@</span>
+          </a>
+          <a href="#contact" class="keycap key-black key-width-3" id="key-hire">
+            <span>HIRE ME</span>
+          </a>
+          <a href="https://linkedin.com/in/JeshikoJ" target="_blank" class="keycap key-grey key-width-2" id="key-x">
+            <span>X</span>
+          </a>
+          
+          <!-- Row 3: CALL ME (span 3), DB (span 2), BH (span 2) -->
+          <a href="tel:+917395881571" class="keycap key-black key-width-3" id="key-call">
+            <span>CALL ME</span>
+          </a>
+          <a href="#work" class="keycap key-pink key-width-2" id="key-dribbble">
+            <span>DB</span>
+          </a>
+          <a href="#about" class="keycap key-blue key-width-2" id="key-behance">
+            <span>BH</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Middle Panel: Speaker Grill -->
+      <div class="console-middle">
+        <div class="grill-lines">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      
+      <!-- Right Panel: Oscilloscope display -->
+      <div class="console-right">
+        <div class="oscilloscope-bezel">
+          <div class="screw top-left"></div>
+          <div class="screw top-right"></div>
+          <div class="screw bottom-left"></div>
+          <div class="screw bottom-right"></div>
+          
+          <div class="oscilloscope-screen">
+            <div class="screen-grid"></div>
+            <svg class="oscilloscope-wave" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path d="M 0,50 L 0,20 L 25,20 L 25,50 L 25,80 L 50,80 L 50,50 L 50,20 L 75,20 L 75,50 L 75,80 L 100,80 L 100,50" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Project Case Study Modal Overlay -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="project-modal">
+      <div class="device-header">
+        <div class="device-dots">
+          <span class="device-dot red" id="modal-close-btn" style="cursor: pointer;"></span>
+          <span class="device-dot yellow"></span>
+          <span class="device-dot green"></span>
+        </div>
+        <span class="device-title" id="modal-header-title">project_details.log</span>
+        <span></span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image-wrapper">
+          <img src="" alt="Project Image" id="modal-img">
+        </div>
+        <div class="modal-content-details">
+          <h3 class="modal-title" id="modal-title">Project Title</h3>
+          <div class="modal-tags" id="modal-tags">
+            <!-- Tags dynamically populated -->
+          </div>
+          <p class="modal-desc" id="modal-desc">Detailed project description goes here.</p>
+          
+          <div class="modal-case-study">
+            <h4>Technical Overview & Implementation</h4>
+            <ul id="modal-bullets">
+              <!-- Case study bullets populated dynamically -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
