@@ -101,6 +101,9 @@ body {
 }
 
 .side-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1rem;
   color: var(--text-muted);
   text-decoration: none;
@@ -143,6 +146,9 @@ header {
 }
 
 .header-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-sans);
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -576,6 +582,9 @@ section {
 }
 
 .skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.9rem;
   padding: 8px 16px;
   border: 1px solid var(--border-color);
