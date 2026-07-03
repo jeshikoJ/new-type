@@ -1442,20 +1442,50 @@ footer::before {
 .log-info { color: var(--accent-blue); }
 
 
-/* --- About Tabbed Casing --- */
+/* --- About Tabbed IDE Casing --- */
 .about-tabs-container {
   width: 100%;
-  background: #121214;
-  border: 2px solid var(--border-color);
+  background: #1e1e24;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
 }
 
+/* IDE Window Top Header Bar */
+.editor-window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #18181c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.editor-window-header .device-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.editor-window-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+/* Tab Headers */
 .tab-headers {
   display: flex;
-  background: #1c1c1e;
-  border-bottom: 2px solid var(--border-color);
+  background: #141416;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1466,37 +1496,61 @@ footer::before {
 }
 
 .tab-btn {
-  flex: 1 0 auto;
-  white-space: nowrap;
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #18181c;
   border: none;
   outline: none;
-  padding: 14px 16px;
-  font-family: var(--font-pixel);
-  font-size: 0.8rem;
+  padding: 12px 20px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
   color: var(--text-muted);
-  border-right: 1px solid var(--border-color);
-  transition: var(--transition-fast);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
 }
 
-.tab-btn:last-child {
-  border-right: none;
+.tab-icon {
+  font-size: 0.9rem;
+}
+
+.tab-close {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.15);
+  margin-left: 6px;
+  transition: color 0.2s ease;
 }
 
 .tab-btn:hover {
-  color: var(--text-main);
   background: rgba(255, 255, 255, 0.02);
+  color: var(--text-main);
+}
+
+.tab-btn:hover .tab-close {
+  color: var(--text-muted);
 }
 
 .tab-btn.active {
   color: var(--accent-orange);
-  background: #121214;
-  border-bottom: 2px solid #121214;
-  margin-bottom: -2px;
+  background: #1e1e24;
+  border-bottom: 1px solid transparent;
+  border-top: 2px solid var(--accent-orange);
+  padding-top: 10px;
+  font-weight: 500;
 }
 
+.tab-btn.active .tab-close {
+  color: var(--accent-orange);
+}
+
+/* Tab Contents & Body */
 .tab-contents {
-  padding: 24px;
+  padding: 0;
+  background: #1e1e24;
+  flex-grow: 1;
 }
 
 .tab-content {
@@ -1505,12 +1559,58 @@ footer::before {
 
 .tab-content.active {
   display: block;
-  animation: tab-fade-in 0.3s ease;
+  animation: tab-fade-in 0.25s ease;
 }
 
 @keyframes tab-fade-in {
-  from { opacity: 0; transform: translateY(4px); }
+  from { opacity: 0; transform: translateY(2px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Editor Grid Row Layout */
+.editor-row {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  min-height: 280px;
+}
+
+.editor-line-numbers {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  background: #19191e;
+  border-right: 1px solid rgba(255, 255, 255, 0.03);
+  text-align: right;
+  padding-right: 12px;
+  user-select: none;
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.12);
+  line-height: 2;
+  gap: 2px;
+}
+
+.editor-line-numbers span {
+  display: block;
+}
+
+.editor-text-body {
+  padding: 24px 28px;
+  overflow-y: auto;
+}
+
+.code-comment {
+  font-family: var(--font-pixel);
+  color: #6a9955;
+  font-size: 0.78rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.code-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
 }
 
 .achievements-list {
@@ -1812,11 +1912,25 @@ footer::before {
     width: 100%;
   }
   .tab-btn {
-    padding: 10px 12px;
+    padding: 8px 10px;
     font-size: 0.7rem;
   }
+  .tab-close {
+    display: none;
+  }
   .tab-contents {
-    padding: 16px;
+    padding: 0;
+  }
+  .editor-row {
+    grid-template-columns: 32px 1fr;
+  }
+  .editor-line-numbers {
+    padding: 16px 0;
+    padding-right: 6px;
+    font-size: 0.65rem;
+  }
+  .editor-text-body {
+    padding: 16px 14px;
   }
   .about-bio p {
     font-size: 0.95rem;
@@ -1932,8 +2046,8 @@ footer::before {
   }
 
   .tab-btn {
-    padding: 9px 10px;
-    font-size: 0.62rem;
+    padding: 6px 8px;
+    font-size: 0.6rem;
   }
 
   .download-btn {

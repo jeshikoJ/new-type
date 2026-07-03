@@ -237,48 +237,85 @@
 
           <!-- Tabbed Info Casing -->
           <div class="about-tabs-container">
+            <!-- IDE Window controls & header -->
+            <div class="editor-window-header">
+              <div class="device-dots">
+                <span class="device-dot red"></span>
+                <span class="device-dot yellow"></span>
+                <span class="device-dot green"></span>
+              </div>
+              <span class="editor-window-title">workspace - Jeshiko J</span>
+            </div>
+
             <div class="tab-headers">
-              <button class="tab-btn active" data-tab="tab-bio">profile.txt</button>
-              <button class="tab-btn" data-tab="tab-education">education.log</button>
-              <button class="tab-btn" data-tab="tab-experience">experience.log</button>
-              <button class="tab-btn" data-tab="tab-certifications">credentials.sys</button>
+              <button class="tab-btn active" data-tab="tab-bio">
+                <span class="tab-icon">📄</span>profile.txt
+                <span class="tab-close">&times;</span>
+              </button>
+              <button class="tab-btn" data-tab="tab-education">
+                <span class="tab-icon">🎓</span>education.log
+                <span class="tab-close">&times;</span>
+              </button>
+              <button class="tab-btn" data-tab="tab-experience">
+                <span class="tab-icon">💼</span>experience.log
+                <span class="tab-close">&times;</span>
+              </button>
+              <button class="tab-btn" data-tab="tab-certifications">
+                <span class="tab-icon">🛡️</span>credentials.sys
+                <span class="tab-close">&times;</span>
+              </button>
             </div>
             <div class="tab-contents">
               
               <!-- Tab 1: Bio -->
               <div class="tab-content active" id="tab-bio">
-                <div class="about-bio">
-                  <p>
-                    Motivated Software Engineer with hands-on experience in full-stack web development. I specialize in designing and deploying scalable web applications from end to end.
-                  </p>
-                  <p>
-                    I am actively expanding my expertise in Cloud Computing (AWS), DevOps automation, CI/CD pipelines, and Infrastructure as Code, seeking to grow in high-performance environments.
-                  </p>
-                  
-                  <div class="skill-category">
-                    <span class="section-label" style="font-size: 0.8rem; margin-bottom: 8px;">Cloud & DevOps</span>
-                    <div class="skills-list">
-                      <span class="skill-tag">☁️ AWS (EC2, S3, VPC)</span>
-                      <span class="skill-tag">🐳 Docker</span>
-                      <span class="skill-tag">☸️ Kubernetes</span>
-                      <span class="skill-tag">⚙️ Terraform</span>
-                      <span class="skill-tag">🤖 Ansible</span>
-                      <span class="skill-tag">🔄 CI/CD Pipelines</span>
-                      <span class="skill-tag">👷 Jenkins</span>
-                    </div>
+                <div class="editor-row">
+                  <div class="editor-line-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
                   </div>
+                  <div class="editor-text-body">
+                    <p class="code-comment">// Jeshiko J's Professional Profile</p>
+                    <p class="code-text" style="margin-bottom: 12px;">
+                      Motivated Software Engineer with hands-on experience in full-stack web development. I specialize in designing and deploying scalable web applications from end to end.
+                    </p>
+                    <p class="code-text" style="margin-bottom: 24px;">
+                      I am actively expanding my expertise in Cloud Computing (AWS), DevOps automation, CI/CD pipelines, and Infrastructure as Code, seeking to grow in high-performance environments.
+                    </p>
+                    
+                    <div class="skill-category">
+                      <span class="section-label" style="font-size: 0.8rem; margin-bottom: 8px;">Cloud & DevOps</span>
+                      <div class="skills-list">
+                        <span class="skill-tag">☁️ AWS (EC2, S3, VPC)</span>
+                        <span class="skill-tag">🐳 Docker</span>
+                        <span class="skill-tag">☸️ Kubernetes</span>
+                        <span class="skill-tag">⚙️ Terraform</span>
+                        <span class="skill-tag">🤖 Ansible</span>
+                        <span class="skill-tag">🔄 CI/CD Pipelines</span>
+                        <span class="skill-tag">👷 Jenkins</span>
+                      </div>
+                    </div>
 
-                  <div class="skill-category" style="margin-top: 16px;">
-                    <span class="section-label" style="font-size: 0.8rem; margin-bottom: 8px;">Full-Stack Development</span>
-                    <div class="skills-list">
-                      <span class="skill-tag">🐍 Python</span>
-                      <span class="skill-tag">💚 Django</span>
-                      <span class="skill-tag">⚛️ React</span>
-                      <span class="skill-tag">🍃 MongoDB</span>
-                      <span class="skill-tag">⚡ JavaScript</span>
-                      <span class="skill-tag">🎨 HTML5 / CSS3</span>
-                      <span class="skill-tag">🌊 Tailwind CSS</span>
-                      <span class="skill-tag">🔌 REST APIs</span>
+                    <div class="skill-category" style="margin-top: 18px;">
+                      <span class="section-label" style="font-size: 0.8rem; margin-bottom: 8px;">Full-Stack Development</span>
+                      <div class="skills-list">
+                        <span class="skill-tag">🐍 Python</span>
+                        <span class="skill-tag">💚 Django</span>
+                        <span class="skill-tag">⚛️ React</span>
+                        <span class="skill-tag">🍃 MongoDB</span>
+                        <span class="skill-tag">⚡ JavaScript</span>
+                        <span class="skill-tag">🎨 HTML5 / CSS3</span>
+                        <span class="skill-tag">🌊 Tailwind CSS</span>
+                        <span class="skill-tag">🔌 REST APIs</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -286,80 +323,130 @@
 
               <!-- Tab 2: Education & Achievements -->
               <div class="tab-content" id="tab-education">
-                <div class="education-block" style="border-bottom: 1px dashed var(--border-color); padding-bottom: 18px; margin-bottom: 18px;">
-                  <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Bachelor of Engineering (B.E.)</h4>
-                  <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">Computer Science & Engineering | June 2025</p>
-                  <p class="edu-desc" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">
-                    Bethlahem Institute of Engineering, Kanyakumari, Tamil Nadu.<br>
-                    <strong>Areas of Focus:</strong> Full-Stack Development, Cloud Infrastructure, DevOps.
-                  </p>
-                </div>
-                
-                <div class="achievements-block">
-                  <span class="section-label" style="font-size: 0.8rem; margin-bottom: 10px;">Key Achievements</span>
-                  <ul class="achievements-list">
-                    <li>Completed industrial visit at Srishti Campus, observing agile workflows across 4+ enterprise software teams.</li>
-                    <li>Identified 3 key areas for personal skill development in cloud infrastructure and CI/CD automation based on enterprise technology exposure.</li>
-                    <li>Developed professional portfolio website with CI/CD pipeline visual motif.</li>
-                  </ul>
+                <div class="editor-row">
+                  <div class="editor-line-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  <div class="editor-text-body">
+                    <p class="code-comment">// Academic Qualifications & Achievements</p>
+                    <div class="education-block" style="border-bottom: 1px dashed var(--border-color); padding-bottom: 18px; margin-bottom: 18px;">
+                      <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Bachelor of Engineering (B.E.)</h4>
+                      <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">Computer Science & Engineering | June 2025</p>
+                      <p class="edu-desc" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">
+                        Bethlahem Institute of Engineering, Kanyakumari, Tamil Nadu.<br>
+                        <strong>Areas of Focus:</strong> Full-Stack Development, Cloud Infrastructure, DevOps.
+                      </p>
+                    </div>
+                    
+                    <div class="achievements-block">
+                      <span class="section-label" style="font-size: 0.8rem; margin-bottom: 10px;">Key Achievements</span>
+                      <ul class="achievements-list">
+                        <li>Completed industrial visit at Srishti Campus, observing agile workflows across 4+ enterprise software teams.</li>
+                        <li>Identified 3 key areas for personal skill development in cloud infrastructure and CI/CD automation based on enterprise technology exposure.</li>
+                        <li>Developed professional portfolio website with CI/CD pipeline visual motif.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Tab 3: Experience -->
               <div class="tab-content" id="tab-experience">
-                <div class="education-block" style="border-bottom: 1px dashed var(--border-color); padding-bottom: 18px; margin-bottom: 18px;">
-                  <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Artificial Intelligence & ML Intern</h4>
-                  <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">Crescent Infotech | June 2024 - Aug 2024</p>
-                  <ul class="achievements-list" style="margin-top: 10px;">
-                    <li>Developed machine learning prototypes utilizing Python, pandas, and scikit-learn for data analysis workflows.</li>
-                    <li>Collaborated with senior engineers to optimize data processing pipelines, reducing computation time by 15%.</li>
-                    <li>Created technical documentation and presentations for internal stakeholder review.</li>
-                  </ul>
-                </div>
+                <div class="editor-row">
+                  <div class="editor-line-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                  </div>
+                  <div class="editor-text-body">
+                    <p class="code-comment">// Internship & Professional Exposure</p>
+                    <div class="education-block" style="border-bottom: 1px dashed var(--border-color); padding-bottom: 18px; margin-bottom: 18px;">
+                      <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Artificial Intelligence & ML Intern</h4>
+                      <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">Crescent Infotech | June 2024 - Aug 2024</p>
+                      <ul class="achievements-list" style="margin-top: 10px;">
+                        <li>Developed machine learning prototypes utilizing Python, pandas, and scikit-learn for data analysis workflows.</li>
+                        <li>Collaborated with senior engineers to optimize data processing pipelines, reducing computation time by 15%.</li>
+                        <li>Created technical documentation and presentations for internal stakeholder review.</li>
+                      </ul>
+                    </div>
 
-                <div class="education-block">
-                  <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Web Development Intern</h4>
-                  <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">NoviTech | 2023</p>
-                  <ul class="achievements-list" style="margin-top: 10px;">
-                    <li>Designed and implemented responsive frontend interfaces using HTML5, CSS3, and JavaScript.</li>
-                    <li>Ensured cross-browser compatibility and optimized web assets for faster loading speeds.</li>
-                    <li>Participated in agile development cycles to deliver functional UI components on schedule.</li>
-                  </ul>
+                    <div class="education-block">
+                      <h4 class="edu-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 6px;">Web Development Intern</h4>
+                      <p class="edu-meta" style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 8px;">NoviTech | 2023</p>
+                      <ul class="achievements-list" style="margin-top: 10px;">
+                        <li>Designed and implemented responsive frontend interfaces using HTML5, CSS3, and JavaScript.</li>
+                        <li>Ensured cross-browser compatibility and optimized web assets for faster loading speeds.</li>
+                        <li>Participated in agile development cycles to deliver functional UI components on schedule.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Tab 4: Certifications -->
               <div class="tab-content" id="tab-certifications">
-                <div class="certifications-grid">
-                  
-                  <div class="cert-card">
-                    <span class="cert-badge">Certification</span>
-                    <h5>Cloud DevOps</h5>
-                    <p>SLA Academy (2026)</p>
-                    <span class="cert-tools">Docker, CI/CD, Kubernetes, Ansible</span>
+                <div class="editor-row">
+                  <div class="editor-line-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
                   </div>
+                  <div class="editor-text-body">
+                    <p class="code-comment">// Professional Industry Certifications</p>
+                    <div class="certifications-grid">
+                      
+                      <div class="cert-card">
+                        <span class="cert-badge">Certification</span>
+                        <h5>Cloud DevOps</h5>
+                        <p>SLA Academy (2026)</p>
+                        <span class="cert-tools">Docker, CI/CD, Kubernetes, Ansible</span>
+                      </div>
 
-                  <div class="cert-card">
-                    <span class="cert-badge">Certification</span>
-                    <h5>Python Full Stack</h5>
-                    <p>E-MAX (2025)</p>
-                    <span class="cert-tools">Django, React, REST, MongoDB</span>
+                      <div class="cert-card">
+                        <span class="cert-badge">Certification</span>
+                        <h5>Python Full Stack</h5>
+                        <p>E-MAX (2025)</p>
+                        <span class="cert-tools">Django, React, REST, MongoDB</span>
+                      </div>
+
+                      <div class="cert-card">
+                        <span class="cert-badge">Certification</span>
+                        <h5>Data Science with Python</h5>
+                        <p>IAMAI (2023)</p>
+                        <span class="cert-tools">pandas, scikit-learn, Statistics</span>
+                      </div>
+
+                      <div class="cert-card">
+                        <span class="cert-badge">Certification</span>
+                        <h5>Interaction Design</h5>
+                        <p>Feather (2024)</p>
+                        <span class="cert-tools">UI/UX Principles, Figma, Prototyping</span>
+                      </div>
+
+                    </div>
                   </div>
-
-                  <div class="cert-card">
-                    <span class="cert-badge">Certification</span>
-                    <h5>Data Science with Python</h5>
-                    <p>IAMAI (2023)</p>
-                    <span class="cert-tools">pandas, scikit-learn, Statistics</span>
-                  </div>
-
-                  <div class="cert-card">
-                    <span class="cert-badge">Certification</span>
-                    <h5>Interaction Design</h5>
-                    <p>Feather (2024)</p>
-                    <span class="cert-tools">UI/UX Principles, Figma, Prototyping</span>
-                  </div>
-
                 </div>
               </div>
 
