@@ -413,15 +413,15 @@ section {
 /* --- About Section --- */
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-  align-items: flex-start;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px 40px;
+  align-items: start;
 }
 
 .about-graphics {
-  position: sticky;
-  top: 140px;
-  aspect-ratio: 1.2;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.25;
   background: radial-gradient(circle, rgba(28,134,255,0.06) 0%, rgba(0,0,0,0) 70%);
   display: flex;
   align-items: center;
@@ -498,17 +498,11 @@ section {
 }
 
 /* About Bio & Photo Layout */
-.about-bio-container {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 40px;
-  align-items: flex-start;
-}
-
 .photo-card {
-  position: sticky;
-  top: 140px;
+  position: relative;
   width: 100%;
+  max-width: 320px;
+  justify-self: end;
   background: #161618;
   border: 2px solid var(--border-color);
   border-radius: 12px;
@@ -531,6 +525,12 @@ section {
   font-size: 0.7rem;
   color: var(--text-muted);
   margin-left: auto;
+}
+
+.about-tabs-container {
+  grid-column: span 2;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .photo-wrapper {
@@ -1790,12 +1790,15 @@ footer::before {
     position: relative;
     top: unset;
   }
-  .about-bio-container {
-    grid-template-columns: 200px 1fr;
-  }
   .photo-card {
     position: relative;
     top: unset;
+    max-width: 260px;
+    justify-self: center;
+  }
+  .about-tabs-container {
+    grid-column: span 1;
+    width: 100%;
   }
   .console-middle {
     display: none;
@@ -1898,17 +1901,14 @@ footer::before {
     position: relative;
     top: unset;
   }
-  .about-bio-container {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 24px;
-  }
   .photo-card {
     max-width: 240px;
     position: relative;
     top: unset;
+    justify-self: center;
   }
   .about-tabs-container {
+    grid-column: span 1;
     width: 100%;
   }
   .tab-btn {
