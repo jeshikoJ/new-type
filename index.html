@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
   <link rel="shortcut icon" type="image/jpeg" href="assets/favicon.jpg">
+  <!-- Web3Forms - Free static site email service -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </head>
 <body>
 
@@ -380,20 +382,24 @@
             <span></span>
           </div>
           <form class="terminal-form" id="contact-form">
+            <!-- Web3Forms access key - sends to chandranjeshiko@gmail.com -->
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+            <input type="hidden" name="subject" value="New message from Jeshiko's Portfolio">
+            <input type="hidden" name="from_name" value="Portfolio Contact Console">
             <div class="terminal-line">
               <span class="prompt">visitor@guest:~$</span>
               <label for="form-name">enter_name:</label>
-              <input type="text" id="form-name" required placeholder="your name">
+              <input type="text" id="form-name" name="name" required placeholder="your name">
             </div>
             <div class="terminal-line">
               <span class="prompt">visitor@guest:~$</span>
               <label for="form-email">enter_email:</label>
-              <input type="email" id="form-email" required placeholder="your email">
+              <input type="email" id="form-email" name="email" required placeholder="your email">
             </div>
             <div class="terminal-line textarea-line">
               <span class="prompt">visitor@guest:~$</span>
               <label for="form-message">enter_message:</label>
-              <textarea id="form-message" required placeholder="write your message..."></textarea>
+              <textarea id="form-message" name="message" required placeholder="write your message..."></textarea>
             </div>
             <div class="terminal-line submit-line">
               <span class="prompt">visitor@guest:~$</span>

@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
       startX = touch.clientX - currentX;
       startY = touch.clientY - currentY;
       sticker.style.zIndex = 10;
-    });
+      e.preventDefault();
+    }, { passive: false });
     
     document.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
@@ -97,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
       currentX = touch.clientX - startX;
       currentY = touch.clientY - startY;
       sticker.style.transform = `translate(${currentX}px, ${currentY}px) rotate(var(--rot, 0deg))`;
-    });
+      e.preventDefault();
+    }, { passive: false });
     
     const endDrag = () => {
       if (isDragging) {
@@ -314,46 +316,81 @@ document.addEventListener('DOMContentLoaded', () => {
   const formLogs = document.getElementById('form-logs');
 
   if (contactForm && formLogs) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const nameVal = document.getElementById('form-name').value;
       const emailVal = document.getElementById('form-email').value;
-      const messageVal = document.getElementById('form-message').value;
 
-      // Disable inputs during simulation
+      // Disable inputs during submission
       const inputs = contactForm.querySelectorAll('input, textarea, button');
       inputs.forEach(input => input.disabled = true);
 
-      // Clear logs and print simulated shell outputs
+      // Clear logs
       formLogs.innerHTML = '';
 
-      const logLines = [
-        { text: '> visitor@guest:~$ ./submit_message.sh', type: '' },
-        { text: '> Initializing SMTP handshake with mail.jeshiko.dev [port 587]...', type: 'log-info', delay: 400 },
-        { text: '> DNS: Resolving mailserver MX records... Done.', type: 'log-info', delay: 800 },
-        { text: `> Sender validation check for: "${nameVal}" <${emailVal}>... Pass.`, type: '', delay: 1200 },
-        { text: '> Encrypting message packet payload (AES-256)... Done.', type: 'log-info', delay: 1600 },
-        { text: '> [SUCCESS] Envelope dispatched to jeshikochandran@gmail.com successfully!', type: 'log-success', delay: 2000 },
-        { text: '> System: Jeshiko J will compile a response shortly. Terminating link.', type: '', delay: 2400 }
-      ];
+      const appendLog = (text, type = '') => {
+        const lineDiv = document.createElement('div');
+        lineDiv.className = `log-entry ${type}`;
+        lineDiv.textContent = text;
+        formLogs.appendChild(lineDiv);
+        formLogs.scrollTop = formLogs.scrollHeight;
+      };
 
-      logLines.forEach(line => {
-        setTimeout(() => {
-          const lineDiv = document.createElement('div');
-          lineDiv.className = `log-entry ${line.type}`;
-          lineDiv.textContent = line.text;
-          formLogs.appendChild(lineDiv);
-          // scroll logs into view
-          formLogs.scrollTop = formLogs.scrollHeight;
+      appendLog('> visitor@guest:~$ ./submit_message.sh');
+      
+      await new Promise(resolve => setTimeout(resolve, 400));
+      appendLog('> Connecting to secure dispatch relay... Done.', 'log-info');
+      
+      await new Promise(resolve => setTimeout(resolve, 400));
+      appendLog(`> Validating sender: "${nameVal}" <${emailVal}>... Pass.`);
 
-          // Re-enable form after final line
-          if (line.delay === 2400) {
-            inputs.forEach(input => input.disabled = false);
-            contactForm.reset();
-          }
-        }, line.delay || 0);
-      });
+      await new Promise(resolve => setTimeout(resolve, 400));
+      appendLog('> Preparing payload packet...', 'log-info');
+
+      // Check access key
+      const accessKeyInput = contactForm.querySelector('input[name="access_key"]');
+      const accessKeyVal = accessKeyInput ? accessKeyInput.value : '';
+
+      if (!accessKeyVal || accessKeyVal === 'YOUR_WEB3FORMS_KEY') {
+        await new Promise(resolve => setTimeout(resolve, 800));
+        appendLog('> [ERROR] Access Key not configured (found: "YOUR_WEB3FORMS_KEY").', 'log-error');
+        appendLog('> SYSTEM: Real message dispatch halted.', 'log-error');
+        appendLog('> SYSTEM: Please replace "YOUR_WEB3FORMS_KEY" in index.html with the key sent to your email.', 'log-info');
+        inputs.forEach(input => input.disabled = false);
+        return;
+      }
+
+      await new Promise(resolve => setTimeout(resolve, 400));
+      appendLog('> Transmitting payload over secure tunnel...', 'log-info');
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const data = await response.json();
+
+        if (data.success) {
+          await new Promise(resolve => setTimeout(resolve, 400));
+          appendLog('> [SUCCESS] Envelope dispatched to jeshikochandran@gmail.com successfully!', 'log-success');
+          appendLog('> System: Jeshiko J will compile a response shortly. Terminating link.', '');
+          contactForm.reset();
+        } else {
+          await new Promise(resolve => setTimeout(resolve, 400));
+          appendLog(`> [ERROR] Relay rejected payload: ${data.message || 'Unknown error'}`, 'log-error');
+          appendLog('> SYSTEM: Please check your access key configuration.', 'log-info');
+        }
+      } catch (err) {
+        await new Promise(resolve => setTimeout(resolve, 400));
+        appendLog(`> [ERROR] Connection failure: ${err.message || 'Unknown network error'}`, 'log-error');
+        appendLog('> SYSTEM: Transmission aborted.', 'log-error');
+      }
+
+      // Re-enable form
+      inputs.forEach(input => input.disabled = false);
     });
   }
 

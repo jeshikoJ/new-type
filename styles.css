@@ -1714,7 +1714,26 @@ footer::before {
     padding: 5px 10px;
   }
   .sticker {
-    display: none;
+    display: flex !important;
+    font-size: 0.72rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  }
+  .sticker.s1 {
+    top: 12%;
+    right: 5%;
+    --rot: -6deg;
+  }
+  .sticker.s2 {
+    bottom: 22%;
+    right: 5%;
+    --rot: 8deg;
+  }
+  .sticker.s3 {
+    top: 60%;
+    left: 4%;
+    --rot: -4deg;
   }
   .download-btn {
     padding: 12px 22px;
@@ -1833,6 +1852,23 @@ footer::before {
 @media (max-width: 480px) {
   main {
     padding: 0 14px;
+  }
+
+  .sticker {
+    font-size: 0.64rem;
+    padding: 6px 10px;
+  }
+  .sticker.s1 {
+    top: 15%;
+    right: 2%;
+  }
+  .sticker.s2 {
+    bottom: 25%;
+    right: 2%;
+  }
+  .sticker.s3 {
+    top: 55%;
+    left: 2%;
   }
 
   .hero-title {
