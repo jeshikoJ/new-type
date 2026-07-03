@@ -1565,7 +1565,14 @@ footer::before {
   margin-top: 4px;
 }
 
-/* --- Download Button --- */
+/* --- Download Buttons --- */
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
 .download-btn {
   display: inline-flex;
   align-items: center;
@@ -1589,6 +1596,19 @@ footer::before {
   background: var(--text-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+.download-btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+
+.download-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 .download-btn svg {
