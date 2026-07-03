@@ -1748,7 +1748,7 @@ footer::before {
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
   }
   .sticker.s1 {
-    top: 12%;
+    top: 85px;
     right: 5%;
     --rot: -6deg;
   }
@@ -1886,7 +1886,7 @@ footer::before {
     padding: 6px 10px;
   }
   .sticker.s1 {
-    top: 15%;
+    top: 75px;
     right: 2%;
   }
   .sticker.s2 {
