@@ -1570,7 +1570,7 @@ footer::before {
 /* Editor Grid Row Layout */
 .editor-row {
   display: grid;
-  grid-template-columns: 45px 1fr;
+  grid-template-columns: 45px minmax(0, 1fr);
   min-height: 280px;
 }
 
@@ -1969,7 +1969,7 @@ footer::before {
     padding: 0;
   }
   .editor-row {
-    grid-template-columns: 32px 1fr;
+    grid-template-columns: 32px minmax(0, 1fr);
   }
   .editor-line-numbers {
     padding: 16px 0;
