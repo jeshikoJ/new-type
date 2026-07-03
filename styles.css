@@ -135,6 +135,26 @@ header {
   color: var(--text-main);
 }
 
+.header-links {
+  display: flex;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: 48px;
+}
+
+.header-link {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.header-link:hover {
+  color: var(--text-main);
+}
+
 .nav-status {
   display: flex;
   align-items: center;
@@ -1684,6 +1704,13 @@ footer::before {
 
   header {
     padding: 14px 20px;
+  }
+  .header-links {
+    gap: 14px;
+    margin-right: 18px;
+  }
+  .header-link {
+    font-size: 0.8rem;
   }
 
   main {

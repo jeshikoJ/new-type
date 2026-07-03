@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================== */
   const keyMap = {
     'Escape': { selector: '#key-home', target: '#hero' },
-    'KeyG': { selector: '#key-github', target: 'https://github.com/JeshikoJ', external: true },
+    'KeyG': { selector: '#key-github', target: 'https://github.com/jeshikoJ', external: true },
     'KeyI': { selector: '#key-linkedin', target: 'https://linkedin.com/in/JeshikoJ', external: true },
     'KeyE': { selector: '#key-email', target: 'mailto:chandranjeshiko@gmail.com', external: true },
     'KeyH': { selector: '#key-hire', target: '#contact' },
